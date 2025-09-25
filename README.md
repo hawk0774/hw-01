@@ -30,7 +30,17 @@
 6. Замените имя docker-контейнера в блоке кода на ```hello_world```. Не перепутайте имя контейнера и имя образа. Мы всё ещё продолжаем использовать name = "nginx:latest". Выполните команду ```terraform apply -auto-approve```.
  
 Объясните своими словами, в чём может быть опасность применения ключа  ```-auto-approve```. Догадайтесь или нагуглите зачем может пригодиться данный ключ? В качестве ответа дополнительно приложите вывод команды ```docker ps```.
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-01/main/Screenshot_9.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-01/main/Screenshot_10.png)
+Данный ключ минует этап проверки перед запуском конфигурации, тот этап где можно увидеть изменения вносимые и остановиться. Пригодиться может в скриптах и прочих автоматизациях или в тестировании.
 
 7. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**.
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-01/main/Screenshot_11.png)
+
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-01/main/Screenshot_13.png)
  
 8. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ**, а затем **ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ** строчкой из документации [**terraform провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  (ищите в классификаторе resource docker_image )
+-Атрибут keep_locally = true в ресурсе docker_image указывает Terraform не удалять Docker-образ nginx:latest из локального хранилища Docker даже в случае, если ресурс docker_image.nginx_image будет удалён из состояния Terraform.-
+![alt text](https://raw.githubusercontent.com/hawk0774/hw-01/main/Screenshot_12.png)
