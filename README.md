@@ -1,4 +1,4 @@
-# -Домашнее задание к занятию «Введение в Terraform»-
+# Домашнее задание к занятию «Введение в Terraform»
 ### Задание 1
 ![alt text](https://raw.githubusercontent.com/hawk0774/hw-01/main/Screenshot_14.png)
 1. Перейдите в каталог [**src**](https://github.com/netology-code/ter-homeworks/tree/main/01/src). Скачайте все необходимые зависимости, использованные в проекте.
