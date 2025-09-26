@@ -4,6 +4,7 @@
 1. Перейдите в каталог [**src**](https://github.com/netology-code/ter-homeworks/tree/main/01/src). Скачайте все необходимые зависимости, использованные в проекте.
  ![alt text](https://raw.githubusercontent.com/hawk0774/hw-01/main/Screenshot_2.png)
 2. Изучите файл **.gitignore**. В каком terraform-файле, согласно этому .gitignore, допустимо сохранить личную, секретную информацию?(логины,пароли,ключи,токены итд)
+
 ![alt text](https://raw.githubusercontent.com/hawk0774/hw-01/main/Screenshot_1.png)
 
 -В файле .gitignore оказывается есть подсказка: # own secret vars store, там прописан файл для переменных персональной авторизации - personal.auto.tfvars. Так же файлы *.tfstate и .tfstate. сохраняют состояние инфраструктуры и могут содержать конфиденциальные данные, такие как пароли и токены. Иногда следует добавлять файлы *.tfvars так как переменные так же могут содержать конфиденциальную информацию. Туда же можно добавлять файлы конфигурации CLI .terraformrc. Более полный список файлов можно найти в официальной документации Github (https://github.com/github/gitignore/blob/main/Terraform.gitignore).-
